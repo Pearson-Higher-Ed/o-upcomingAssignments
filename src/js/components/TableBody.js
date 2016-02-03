@@ -56,6 +56,9 @@ export default class TableBody extends Component{
     let { weekOffset } = this.props
     let weekOffsetTime = weekOffset * 86400000
 
+    // console.log(weekOffsetTime)
+    // console.log(dayTextTime)
+
     let highlightDays = 7
     , rangeStartTime  = weekOffsetTime + dayTextTime
     , rangeEndTime    = weekOffsetTime + currentMonthDayTime + (highlightDays * 86400000)

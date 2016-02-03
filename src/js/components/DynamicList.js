@@ -14,11 +14,11 @@ export default class DynamicList extends Component {
 		this.state = {
 			header        : 'Assignments',
 			data          : data || [],
-			assignmentUrl : 'http://las.stg-openclass.com:80/las-api/api/courses/56671222e4b0008b7d093de8?apiKey=19d26d452432968c9b636c9daf0c6d9b',
+			assignmentUrl : 'http://las.stg-openclass.com:80/las-api/api/courses/55b7dcf1e4b04136b8d24f2a/assignments/7aa13f13-2394-484e-9798-3047bb24ce90/tree?apiKey=19d26d452432968c9b636c9daf0c6d9b',
 			assignmentHeaders : new Headers({
 				"Content-Type"    : "application/json",
 				"Accept"          : "*/*",
-				"x-authorization" : "eyJhbGciOiJSUzUxMiIsImtpZCI6ImsxMDY5NDgxOTAifQ.eyJleHAiOjE0NTQ0NDMzMzUsInN1YiI6ImZmZmZmZmZmNTNhODQwYzJlNGIwN2JhM2UyYTc0NDYwIiwic2Vzc2lkIjoiYjRmMDg4MDk3ODIwNDI2ODg5YmNiNmUwYzk5ZjA1NmYiLCJ0eXBlIjoiYXQiLCJpYXQiOjE0NTQ0MzI1MzV9.T-y7AVHFfGlpz4SNR32gS2e8QlqGkb5wgZMkrae7snBqT7_u1GEEWAuR545Bnt9lw6LM6iTvn0PvnNQ-yGHlAcAKm1bCUFXM8tQR79YfCt1f-XZnx47Lo96mlv2qZWIVFXb6DlGSYwYktMlDQ3pzq2xJB8shBNsH2vbm-hd5Ypk"
+				"x-authorization" : "eyJhbGciOiJSUzUxMiIsImtpZCI6ImsxMDY5NDgxOTAifQ.eyJleHAiOjE0NTQ1NDU1NTcsInN1YiI6ImZmZmZmZmZmNTQ4MjIxY2NlNGIwNGRlZTQyMzhjNmIwIiwic2Vzc2lkIjoiNDEwNGNkYmIwNGU0NDQzOGI2OTc0NjQwYmZkZmI3MDkiLCJ0eXBlIjoiYXQiLCJpYXQiOjE0NTQ1MzQ3NTZ9.SCbU5cYHufnpk1HDD3CNqtMBoTAnM_A9rgPksJbae7bTkh7zr1bYd946OYBJYcQkq58Uz7rCJwX8fND1LD_MT2efN4KVUa4owS-okgnqlZZrYQ8xUY7s1KRxCPBRaUypbQlSi0SCwYmLNsZdKsYQfMCiMgKy5TdEpQguVoRisII"
 			})
 
 		}
@@ -33,7 +33,7 @@ export default class DynamicList extends Component {
 		let { assignmentUrl } = this.state
 
 		// get assignment list...
-		// this.getData(assignmentUrl)
+		this.getData(assignmentUrl)
 
 	}
 
@@ -54,6 +54,7 @@ export default class DynamicList extends Component {
 			return res.json()})
 		 .then( _data => this.setState({data:_data}) )
 		.catch(e => console.log("error "+e))
+console.log(this.state.data)
 	}
 
 

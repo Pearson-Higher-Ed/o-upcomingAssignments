@@ -1,0 +1,14 @@
+{
+  "name": "o-upcomingAssignments",
+  "dependencies": {},
+  "main": [
+    "main.scss",
+    "main.js"
+  ],
+  "ignore": [
+    "examples",
+    "test",
+    ".gitignore"
+  ],
+  "license": "MIT"
+}

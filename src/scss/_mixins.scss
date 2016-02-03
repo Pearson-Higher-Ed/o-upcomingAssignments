@@ -1,0 +1,13 @@
+////
+/// @group o-calendar
+/// @link https://origami.pearsoned.com/registry/components/o-calendar
+////
+
+/// Hello world
+///
+/// @param {String} $who [world]
+@mixin oComponentBlueprintHello($who: world) {
+	.foo {
+		content: 'Hello, #{$who}!';
+	}
+}

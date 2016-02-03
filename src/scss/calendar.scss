@@ -1,0 +1,129 @@
+table{
+  table-layout: fixed;
+  font-family: HelveticaNeue;
+  background-color: darken(#ffffff, 15%);
+  width:18.75em;
+  border-collapse:collapse;
+  border: 1px solid darken(#ffffff, 45%);
+  padding: 0.3em 0.3em 0.3em 0.3em;
+}
+
+td{
+  width:100%;
+}
+
+// .currentDay{
+//   background-color: darken(#ffffff, 5%);
+//   padding: 0.65em 0.65em 0.65em 0.65em;
+//   border-top-right-radius:0.75em;
+//   border-bottom-right-radius:0.75em;
+//   border-top-left-radius:0.75em;
+//   border-bottom-left-radius:0.75em;
+//   z-index: -1;
+// }
+
+.current{
+  background-color: darken(#ffffff, 10%);
+}
+
+// .currentContainer{
+//   background-color: darken(#ffffff, 50%);
+//   border-radius: 0.7em 0.7em 0.7em 0.7em;
+//   z-index: 0;
+// }
+
+.highlight{
+  height:75%;
+  padding: 0.65em 0.65em 0.65em 0.65em;
+  border-collapse: collapse;
+}
+
+.rangeCurrentDay{
+  background-color: darken(#a6e2eb, 15%);
+  border-radius: 0.7em 0.7em 0.7em 0.7em;
+  z-index: inherit;
+}
+
+.rangeStart{
+  border-top: 1px solid darken(#a6e2eb, 15%);
+  border-bottom: 1px solid darken(#a6e2eb, 15%);
+  border-left: 1px solid darken(#a6e2eb, 15%);
+  border-radius: 0.7em 0.0em 0.0em 0.7em;
+  z-index: inherit;
+}
+
+.rangeMiddle{
+  background-color: darken(#d5f1f6, 10%);
+  border-top: 1px solid darken(#a6e2eb, 15%);
+  border-bottom: 1px solid darken(#a6e2eb, 15%);
+  z-index: inherit;
+}
+
+.rangeEnd{
+  background-color: darken(#d5f1f6, 10%);
+  border-top: 1px solid darken(#a6e2eb, 15%);
+  border-bottom: 1px solid darken(#a6e2eb, 15%);
+  border-right: 1px solid darken(#a6e2eb, 15%);
+  border-radius: 0em 0.7em 0.7em 0em;
+  z-index: inherit;
+  margin-right:0.3em;
+}
+
+.weekRow{
+  height:3.125em;
+  text-align: center;
+  border-top: 1px solid darken(#ffffff, 35%);
+}
+
+.weekdayHeaderRowCell{
+  padding: 0.3em 0em 0.3em 0em;
+  font-weight: lighter;
+}
+
+.headerTitle{
+  font-weight: bolder;
+  text-align: left;
+  padding-left: 1.25em;
+}
+
+
+// Button Stuff....
+.button{
+  outline: none;
+  cursor: pointer;
+  background-color: darken(#ffffff, 10%);
+  padding: 0.25em;
+}
+
+.buttonWrapper{
+  float:right;
+  width:7em;
+  font-size: small;
+  margin-top:0.3em;
+  margin-right:0.75em;
+}
+
+#centerButton{
+  border: 1px solid darken(#ffffff, 35%);
+  font-family: HelveticaNeue;
+  border-top-left-radius:0.5em;
+  border-bottom-left-radius:0.5em;
+  border-top-right-radius:0.5em;
+  border-bottom-right-radius:0.5em;
+}
+
+#leftButton{
+  width:1.25em;
+  float:left;
+  border: 1px solid darken(#ffffff, 35%);
+  border-top-left-radius:0.5em;
+  border-bottom-left-radius:0.5em;
+}
+
+#rightButton{
+  width:1.25em;
+  float:right;
+  border: 1px solid darken(#ffffff, 35%);
+  border-top-right-radius:0.5em;
+  border-bottom-right-radius:0.5em;
+}

@@ -53,13 +53,16 @@ export default class TableBody extends Component{
   // applies --CSS STYLES--...
   applyHighlightStyle(dayOfMonth, dayTextTime, currentMonthDayTime){
 
+    let { weekOffset } = this.props
+    let weekOffsetTime = weekOffset * 86400000
+
     let highlightDays = 7
-    , rangeStartTime  = dayTextTime
-    , rangeEndTime    = currentMonthDayTime + (highlightDays * 86400000)
+    , rangeStartTime  = weekOffsetTime + dayTextTime
+    , rangeEndTime    = weekOffsetTime + currentMonthDayTime + (highlightDays * 86400000)
     , highlightStyle  = ""
     , currentRange    = "rangeNotCurrentDay"
 
-    if(rangeStartTime == currentMonthDayTime){
+    if(weekOffsetTime + rangeStartTime == weekOffsetTime + currentMonthDayTime){
       highlightStyle = "rangeStart highlight"
       currentRange   = "rangeCurrentDay"
     }else if(rangeStartTime < rangeEndTime && dayTextTime >= currentMonthDayTime){

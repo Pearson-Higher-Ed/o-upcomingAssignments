@@ -12,7 +12,7 @@ class Calendar extends Component {
 
 	render(){
 
-		let {daysOfWeek, weeks } = this.props
+		let { daysOfWeek } = this.props
 
 		return(
 			<div>

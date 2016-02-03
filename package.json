@@ -1,6 +1,6 @@
 {
   "name": "o-upcomingAssignments",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "private": true,
   "scripts": {
     "test": "./node_modules/karma/bin/karma start karma.conf.js"

@@ -21,7 +21,7 @@ class Calendar extends Component {
 						<HeaderButtonRow {...this.props} />
 						<HeaderWeekDaysRow daysOfWeek={daysOfWeek} />
 					</thead>
-					<TableBody weeks={weeks} />
+					<TableBody {...this.props} />
 				</table>
 				<DynamicList />
 			</div>

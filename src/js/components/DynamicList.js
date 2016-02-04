@@ -18,7 +18,7 @@ export default class DynamicList extends Component {
 			assignmentHeaders : new Headers({
 				"Content-Type"    : "application/json",
 				"Accept"          : "*/*",
-				"x-authorization" : "eyJhbGciOiJSUzUxMiIsImtpZCI6ImsxMDY5NDgxOTAifQ.eyJleHAiOjE0NTQ1NDU1NTcsInN1YiI6ImZmZmZmZmZmNTQ4MjIxY2NlNGIwNGRlZTQyMzhjNmIwIiwic2Vzc2lkIjoiNDEwNGNkYmIwNGU0NDQzOGI2OTc0NjQwYmZkZmI3MDkiLCJ0eXBlIjoiYXQiLCJpYXQiOjE0NTQ1MzQ3NTZ9.SCbU5cYHufnpk1HDD3CNqtMBoTAnM_A9rgPksJbae7bTkh7zr1bYd946OYBJYcQkq58Uz7rCJwX8fND1LD_MT2efN4KVUa4owS-okgnqlZZrYQ8xUY7s1KRxCPBRaUypbQlSi0SCwYmLNsZdKsYQfMCiMgKy5TdEpQguVoRisII"
+				"x-authorization" : "eyJhbGciOiJSUzUxMiIsImtpZCI6ImsxMDY5NDgxOTAifQ.eyJleHAiOjE0NTQ1NzU5MDMsInN1YiI6ImZmZmZmZmZmNTQ4MjIxY2NlNGIwNGRlZTQyMzhjNmIwIiwic2Vzc2lkIjoiMDkyZjJjYTFlNTliNDA4ZGJhMmQxMTE2YjYzZWM4ZDYiLCJ0eXBlIjoiYXQiLCJpYXQiOjE0NTQ1NjUxMDN9.BO0mqcAdrdZAIPyOi5HfsmIPtF_9kn6RwYvuYhWzSpeBw3yYYJduuNk54RINqn139lnbuElPUoEM00tSFG9xtNDh35-YJ3dcxnXME1ogbZuOIWKkALyi9tG6poSOR8IpMkwF8ja-ZjCWuVU8wxiyeGJnDVrFMkRD8ii5wwgnMpY"
 			})
 
 		}
@@ -33,14 +33,14 @@ export default class DynamicList extends Component {
 		let { assignmentUrl } = this.state
 
 		// get assignment list...
-		this.getData(assignmentUrl)
+		// this.getData(assignmentUrl)
 
 	}
 
 
 	getData(assignmentUrl){
 
-		let { assignmentHeaders } = this.state
+		let { assignmentHeaders, data } = this.state
 
 		let assignmentOptions = {
 			method  : "GET",
@@ -52,9 +52,11 @@ export default class DynamicList extends Component {
 	return fetch(assignmentUrl, assignmentOptions)
 		.then((res) => {
 			return res.json()})
-		 .then( _data => this.setState({data:_data}) )
+		 .then( _data => {
+			this.setState({ data:_data.children})
+		 })
 		.catch(e => console.log("error "+e))
-console.log(this.state.data)
+
 	}
 
 
@@ -63,7 +65,7 @@ console.log(this.state.data)
 		let listItemHeader = data.dueDate
 
 		return(
-				<div key={`listItemContainer${index}`} id='listItemContainer' className='listItemContainer'>
+				<div key={`listItemContainer${index}`} id='listItemContainer' className='listItemContainer' >
 					<div id={`listItemHeader${index}`} className='listItemHeader'>{listItemHeader}</div>
 				  { data.items.map((item,i) => this.generateListItem(item, i) )}
 				</div>
@@ -77,7 +79,7 @@ console.log(this.state.data)
 		, listItemBottom     = item.couseSummary
 
 		return(
-			<div key={`listItem${index}`} id={`listItem${index}`} className='listItem'>
+			<div key={`listItem${index}`} id={`listItem${index}`} className='listItem' onClick={() => {window.location = 'http://www.google.com'}}>
 				<div id='listItemTopLeft'  className='listItemTopLeft'>{listItemTopLeft}</div>
 				<div id='listItemTopRight' className='listItemTopRight'>{listItemTopRight}</div>
 				<div id='listItemBottom'   className='listItemBottom'>{listItemBottom}</div>

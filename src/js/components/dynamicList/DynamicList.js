@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 // import {FormattedDate}      from 'react-intl'
-import ListItemContainer    from './ListItemContainer'
+import ListItem    from './ListItem'
 import { data }             from './../../../data.json'
 
 
@@ -66,7 +66,7 @@ export default class DynamicList extends Component {
 			<div id= 'mainContainer' className='mainContainer'>
 				<h3 id='header' className='header'>{header}</h3>
 				<ul id='listContainer' className='listContainer'>
-					{data.map((d,i) => {return <ListItemContainer  key={`ListItemContainer${i}`} data={d} index={i} />} )}
+					{data.map((d,i) => {return <ListItem  key={`ListItem${i}`} data={d} index={i} />} )}
 				</ul>
 			</div>
 		)

@@ -1,29 +1,31 @@
-import React, { Component, PropTypes} from 'react'
+import React, {Component, PropTypes} from 'react'
 
-class ListItem extends Component{
+
+class ListItemContainer extends Component {
 
   render(){
 
-    let {item , index} = this.props
+   let {data, index} = this.props
+console.log(data)
 
-    let listItemTopLeft  = item.courseName
-    , listItemTopRight   = item.dueTime
-    , listItemBottom     = item.couseSummary
+  let listItemTopLeft  = data.items[0].courseName
+  , listItemTopRight   = data.dueDate
+  , listItemBottom     = data.items[0].couseSummary
+
 
     return (
-        <div key={`listItem${index}`} id={`listItem${index}`} className='listItem' onClick={() => {window.location = 'http://www.google.com'}}>
+        <li key={`listItemContainer${index}`} id={`listItemHeader${index}`} className='listItemHeader'>
           <h4 id='listItemTopLeft'  className='listItemTopLeft'>{listItemTopLeft}</h4>
           <h4 id='listItemTopRight' className='listItemTopRight'>{listItemTopRight}</h4>
           <h6 id='listItemBottom'   className='listItemBottom'>{listItemBottom}</h6>
-        </div>
-
+        </li>
     )
   }
 }
 
-PropTypes.ListItem = {
-   item  : PropTypes.object,
-   index : PropTypes.number
-}
+export default ListItemContainer
 
-export default ListItem
+ListItemContainer.PropTypes = {
+  data  : PropTypes.object,
+  index : PropTypes.number
+}

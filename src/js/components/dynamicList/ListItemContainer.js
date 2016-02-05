@@ -9,10 +9,10 @@ class ListItemContainer extends Component {
 console.log(data)
     return (
       <div key={`listItemContainer${index}`} id='listItemContainer' className='listItemContainer' >
-        <div id={`listItemHeader${index}`} className='listItemHeader'>
+        <li id={`listItemHeader${index}`} className='listItemHeader'>
 
         { data.items.map((item,i) => { return <ListItem key={`ListItem${i}`} item={item} index={i} /> } )}
-        </div>
+        </li>
       </div>
     )
   }

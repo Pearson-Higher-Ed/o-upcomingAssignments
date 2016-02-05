@@ -12,9 +12,9 @@ class ListItem extends Component{
 
     return (
         <div key={`listItem${index}`} id={`listItem${index}`} className='listItem' onClick={() => {window.location = 'http://www.google.com'}}>
-          <div id='listItemTopLeft'  className='listItemTopLeft'>{listItemTopLeft}</div>
-          <div id='listItemTopRight' className='listItemTopRight'>{listItemTopRight}</div>
-          <div id='listItemBottom'   className='listItemBottom'>{listItemBottom}</div>
+          <h4 id='listItemTopLeft'  className='listItemTopLeft'>{listItemTopLeft}</h4>
+          <h4 id='listItemTopRight' className='listItemTopRight'>{listItemTopRight}</h4>
+          <h6 id='listItemBottom'   className='listItemBottom'>{listItemBottom}</h6>
         </div>
 
     )

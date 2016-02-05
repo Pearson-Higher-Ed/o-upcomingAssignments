@@ -41,6 +41,7 @@ td{
 .rangeCurrentDay{
   background-color: darken(#a6e2eb, 15%);
   border-radius: 0.7em 0.7em 0.7em 0.7em;
+  z-index:1;
 }
 
 .rangeStart{
@@ -48,12 +49,14 @@ td{
   border-bottom: 1px solid darken(#a6e2eb, 15%);
   border-left: 1px solid darken(#a6e2eb, 15%);
   border-radius: 0.7em 0.0em 0.0em 0.7em;
+  z-index:1;
 }
 
 .rangeMiddle{
   background-color: darken(#d5f1f6, 10%);
   border-top: 1px solid darken(#a6e2eb, 15%);
   border-bottom: 1px solid darken(#a6e2eb, 15%);
+  z-index:1;
 }
 
 .rangeEnd{
@@ -62,6 +65,7 @@ td{
   border-bottom: 1px solid darken(#a6e2eb, 15%);
   border-right: 1px solid darken(#a6e2eb, 15%);
   border-radius: 0em 0.7em 0.7em 0em;
+  z-index:1;
   margin-right:0.3em;
 }
 

@@ -3,7 +3,7 @@ import TableBody                           from './TableBody'
 import HeaderMonth                         from './HeaderMonth'
 import HeaderButtonRow                     from './HeaderButtonRow'
 import HeaderWeekDaysRow                   from './HeaderWeekDaysRow'
-import DynamicList                         from './DynamicList'
+import DynamicList                         from './../dynamicList/DynamicList'
 
 
 

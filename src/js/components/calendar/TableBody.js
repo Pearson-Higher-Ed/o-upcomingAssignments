@@ -54,7 +54,7 @@ export default class TableBody extends Component{
   applyHighlightStyle(dayOfMonth, dayTextTime, currentMonthDayTime){
 
     let { weekOffset } = this.props
-    let weekOffsetTime = weekOffset * -86400000
+    let weekOffsetTime = 7*(weekOffset * -86400000)
 
     // console.log(weekOffsetTime)
     // console.log(dayTextTime)

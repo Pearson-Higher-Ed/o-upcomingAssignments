@@ -14,7 +14,7 @@ console.log(data)
 
 
     return (
-        <li key={`listItem${index}`} id={`listItemHeader${index}`} className='listItem'>
+        <li key={`listItem${index}`} id={`listItemHeader${index}`} className='listItem' onClick={() => {window.location = "http://www.google.com"} }>
           <h4 className='listItemTopLeft'>{listItemTopLeft}</h4>
           <h4 className='listItemTopRight'>{listItemTopRight}</h4>
           <h6 className='listItemBottom'>{listItemBottom}</h6>

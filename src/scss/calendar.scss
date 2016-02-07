@@ -92,7 +92,7 @@ td{
 
 // Button Stuff....
 .button{
-  // outline: none;````
+  margin-top:0.75em;
   cursor: pointer;
   background-color: darken(#ffffff, 10%);
   padding: 0.25em;
@@ -106,27 +106,29 @@ td{
 //   margin-right:0.75em;
 // }
 
+
+
 #centerButton{
-  border: 1px solid darken(#ffffff, 35%);
   font-family: HelveticaNeue;
-  border-top-left-radius:0.5em;
-  border-bottom-left-radius:0.5em;
-  border-top-right-radius:0.5em;
-  border-bottom-right-radius:0.5em;
+  border-top:  1px solid darken(#ffffff, 35%);
+  border-bottom:  1px solid darken(#ffffff, 35%);
+  border-left: none;
+  border-right: none;
+  height:1.75em;
 }
 
 #leftButton{
   width:1.25em;
-  float:left;
   border: 1px solid darken(#ffffff, 35%);
   border-top-left-radius:0.5em;
   border-bottom-left-radius:0.5em;
+  height:1.75em;
 }
 
 #rightButton{
   width:1.25em;
-  float:right;
   border: 1px solid darken(#ffffff, 35%);
   border-top-right-radius:0.5em;
   border-bottom-right-radius:0.5em;
+  height:1.75em;
 }

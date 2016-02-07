@@ -15,9 +15,9 @@ console.log(data)
 
     return (
         <li key={`listItem${index}`} id={`listItemHeader${index}`} className='listItem'>
-          <h4 id='listItemTopLeft'  className='listItemTopLeft'>{listItemTopLeft}</h4>
-          <h4 id='listItemTopRight' className='listItemTopRight'>{listItemTopRight}</h4>
-          <h6 id='listItemBottom'   className='listItemBottom'>{listItemBottom}</h6>
+          <h4 className='listItemTopLeft'>{listItemTopLeft}</h4>
+          <h4 className='listItemTopRight'>{listItemTopRight}</h4>
+          <h6 className='listItemBottom'>{listItemBottom}</h6>
         </li>
     )
   }

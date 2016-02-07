@@ -65,7 +65,7 @@ export default class DynamicList extends Component {
 		return(
 			<div id= 'mainContainer' className='mainContainer'>
 				<h3 id='header' className='header'>{header}</h3>
-				<ul id='listContainer' className='listContainer'>
+				<ul id='list' className='list'>
 					{data.map((d,i) => {return <ListItem  key={`ListItem${i}`} data={d} index={i} />} )}
 				</ul>
 			</div>

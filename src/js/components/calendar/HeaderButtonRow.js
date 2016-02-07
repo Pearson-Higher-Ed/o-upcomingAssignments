@@ -13,8 +13,8 @@ render(){
       <th className='headerTitle' colSpan='4'>{monthHeader}</th>
       <th colSpan='3' className='buttonWrapper'>
           <button className='button' id='leftButton'   onClick={decrementWeekOffset}>&#10094;</button>
-          <button className='button' id='rightButton'  onClick={incrementWeekoffset}>&#10095;</button>
           <button className='button' id='centerButton' onClick={resetWeekOffset}>today</button>
+          <button className='button' id='rightButton'  onClick={incrementWeekoffset}>&#10095;</button>
       </th>
     </tr>
   )

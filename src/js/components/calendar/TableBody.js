@@ -76,9 +76,14 @@ export default class TableBody extends Component{
 
     return (
       <span className={currentRange}>
-        <span className={`day ${highlightStyle}`} id={`day${dayOfMonth}`}>
-          {dayOfMonth}
-        </span>
+        <div className={`day ${highlightStyle}`} id={`day${dayOfMonth}`}>
+          <span className='dayText'>
+            {dayOfMonth}
+          </span>
+          <span className='bullet'>
+            &bull;
+          </span>
+        </div>
       </span>
     )
   }

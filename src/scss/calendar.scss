@@ -8,9 +8,9 @@ table{
   padding: 0.3em 0.3em 0.3em 0.3em;
 }
 
-td{
-  width:100%;
-}
+td{}
+
+td span{float:left; width:100%; min-width:100%;}
 
 // .currentDay{
 //   background-color: darken(#ffffff, 5%);
@@ -22,27 +22,14 @@ td{
 //   z-index: -1;
 // }
 
-.current{
-  background-color: darken(#ffffff, 10%);
-}
 
-// .currentContainer{
-//   background-color: darken(#ffffff, 50%);
-//   border-radius: 0.7em 0.7em 0.7em 0.7em;
-//   z-index: 0;
-// }
-
-.highlight{
-  height:75%;
-  padding: 0.65em 0.65em 0.65em 0.65em;
-  border-collapse: collapse;
-  min-width:100%;
-}
+.highlight{}
 
 .rangeCurrentDay{
   background-color: darken(#a6e2eb, 15%);
   border-radius: 0.7em 0.7em 0.7em 0.7em;
-  z-index:1;
+  margin-top:5px;
+  margin-bottom:5px;
 }
 
 .rangeStart{
@@ -50,14 +37,12 @@ td{
   border-bottom: 1px solid darken(#a6e2eb, 15%);
   border-left: 1px solid darken(#a6e2eb, 15%);
   border-radius: 0.7em 0.0em 0.0em 0.7em;
-  z-index:1;
 }
 
 .rangeMiddle{
   background-color: darken(#d5f1f6, 10%);
   border-top: 1px solid darken(#a6e2eb, 15%);
   border-bottom: 1px solid darken(#a6e2eb, 15%);
-  z-index:1;
 }
 
 .rangeEnd{
@@ -66,7 +51,6 @@ td{
   border-bottom: 1px solid darken(#a6e2eb, 15%);
   border-right: 1px solid darken(#a6e2eb, 15%);
   border-radius: 0em 0.7em 0.7em 0em;
-  z-index:1;
   margin-right:0.3em;
 }
 
@@ -87,7 +71,10 @@ td{
   padding-left: 1.25em;
 }
 
-.day{}
+.day{
+  margin-top:25%;
+  margin-bottom:25%;
+}
 
 .dayCell{}
 

@@ -53,13 +53,9 @@ export default class TableBody extends Component{
   // applies --CSS STYLES--...
   applyHighlightStyle(dayOfMonth, dayTextTime, currentMonthDayTime){
 
-    let { weekOffset } = this.props
-    let weekOffsetTime = 7*(weekOffset * -86400000)
-
-    console.log(weekOffset)
-    // console.log(dayTextTime)
-
-    let highlightDays      = 7
+    let { weekOffset }    = this.props
+    , weekOffsetTime       = 7*(weekOffset * -86400000)
+    , highlightDays        = 7
     , rangeStartTime       = dayTextTime
     , rangeStartTimeOffset = weekOffsetTime + dayTextTime
     , rangeEndTime         = weekOffsetTime + dayTextTime + (highlightDays * -86400000)
@@ -67,12 +63,9 @@ export default class TableBody extends Component{
     , currentDay           = "currentDay"
     , currentRange         = "rangeNotCurrentDay"
 
-    // if(rangeStartTime == currentMonthDayTime){
-    //   currentRange = 'currentDay'
-    // }
-
     if(rangeStartTimeOffset == currentMonthDayTime){
       highlightStyle = "rangeStart"
+      currentRange   = "rangeCurrentDay"
     }else if((currentMonthDayTime > rangeEndTime) && (rangeStartTimeOffset >= currentMonthDayTime)){
       highlightStyle = "rangeMiddle"
     }else if(currentMonthDayTime == rangeEndTime){
@@ -81,8 +74,8 @@ export default class TableBody extends Component{
 
     return (
       <span className={currentRange}>
-        <div className={`${highlightStyle}`} id={`day${dayOfMonth}`}>
-          <span className={`dayText ${currentDay}`} >
+        <div className={highlightStyle} id={`day${dayOfMonth}`}>
+          <span className={`dayText${dayOfMonth}`} >
             {dayOfMonth}
           </span>
           <br></br>

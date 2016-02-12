@@ -40,7 +40,7 @@ export default class TableBody extends Component{
        dayCell = day + ((week) * 7)
 
        dayList.push(
-         <td key={`dayCell${dayCell}`} className='dayCell' id={`dayCell${dayCell}`}>{this.generateWeekRowDayCellText(dayCell)}</td>
+         <td key={`dayCell${dayCell}`} id={`dayCell${dayCell}`}>{this.generateWeekRowDayCellText(dayCell)}</td>
        )
      }
 
@@ -56,30 +56,36 @@ export default class TableBody extends Component{
     let { weekOffset } = this.props
     let weekOffsetTime = 7*(weekOffset * -86400000)
 
-    // console.log(weekOffsetTime)
+    console.log(weekOffset)
     // console.log(dayTextTime)
 
-    let highlightDays = 7
-    , rangeStartTime  = weekOffsetTime + dayTextTime
-    , rangeEndTime    = weekOffsetTime + currentMonthDayTime + (highlightDays * 86400000)
-    , highlightStyle  = ""
-    , currentRange    = "rangeNotCurrentDay"
+    let highlightDays      = 7
+    , rangeStartTime       = dayTextTime
+    , rangeStartTimeOffset = weekOffsetTime + dayTextTime
+    , rangeEndTime         = weekOffsetTime + dayTextTime + (highlightDays * -86400000)
+    , highlightStyle       = ""
+    , currentDay           = "currentDay"
+    , currentRange         = "rangeNotCurrentDay"
 
-    if(rangeStartTime == currentMonthDayTime){
-      highlightStyle = "rangeStart highlight"
-      currentRange   = "rangeCurrentDay"
-    }else if((rangeStartTime < rangeEndTime) && (dayTextTime >= currentMonthDayTime)){
-      highlightStyle = "rangeMiddle highlight"
-    }else if(rangeStartTime == rangeEndTime){
-      highlightStyle = "rangeEnd highlight"
+    // if(rangeStartTime == currentMonthDayTime){
+    //   currentRange = 'currentDay'
+    // }
+
+    if(rangeStartTimeOffset == currentMonthDayTime){
+      highlightStyle = "rangeStart"
+    }else if((currentMonthDayTime > rangeEndTime) && (rangeStartTimeOffset >= currentMonthDayTime)){
+      highlightStyle = "rangeMiddle"
+    }else if(currentMonthDayTime == rangeEndTime){
+      highlightStyle = "rangeEnd"
     }
 
     return (
       <span className={currentRange}>
-        <div className={`day ${highlightStyle}`} id={`day${dayOfMonth}`}>
-          <span className='dayText'>
+        <div className={`${highlightStyle}`} id={`day${dayOfMonth}`}>
+          <span className={`dayText ${currentDay}`} >
             {dayOfMonth}
           </span>
+          <br></br>
           <span className='bullet'>
             &bull;
           </span>

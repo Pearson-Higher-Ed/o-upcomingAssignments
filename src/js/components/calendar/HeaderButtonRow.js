@@ -9,7 +9,7 @@ render(){
   let { monthHeader, weekOffset, incrementWeekoffset, decrementWeekOffset, resetWeekOffset } = this.props
 
   return(
-    <tr>
+    <tr className='headerRow'>
       <th className='headerTitle' colSpan='4'>{monthHeader}</th>
       <th colSpan='3' className='buttonWrapper'>
           <button className='button' id='leftButton'   onClick={decrementWeekOffset}>&#10094;</button>

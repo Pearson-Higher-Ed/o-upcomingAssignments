@@ -1,9 +1,10 @@
-import React, { Component, PropTypes }     from 'react'
-import TableBody                           from './TableBody'
-import HeaderMonth                         from './HeaderMonth'
-import HeaderButtonRow                     from './HeaderButtonRow'
-import HeaderWeekDaysRow                   from './HeaderWeekDaysRow'
-import DynamicList                         from './../dynamicList/DynamicList'
+import React, { Component, PropTypes } from 'react'
+import TableBody                       from './TableBody'
+import HeaderMonth                     from './HeaderMonth'
+import HeaderButtonRow                 from './HeaderButtonRow'
+import HeaderWeekDaysRow               from './HeaderWeekDaysRow'
+import DynamicList                     from './../dynamicList/DynamicList'
+
 
 
 
@@ -12,7 +13,7 @@ class Calendar extends Component {
 
 	render(){
 
-		let { daysOfWeek } = this.props
+		let { daysOfWeek, data } = this.props
 
 		return(
 			<div>
@@ -21,9 +22,9 @@ class Calendar extends Component {
 						<HeaderButtonRow {...this.props} />
 						<HeaderWeekDaysRow daysOfWeek={daysOfWeek} />
 					</thead>
-					<TableBody {...this.props} />
+					<TableBody {...this.props} data={data} />
 				</table>
-				<DynamicList />
+				<DynamicList data={data} />
 			</div>
 		)
 
@@ -39,7 +40,8 @@ Calendar.propTypes = {
 	data                : PropTypes.array,
 	weeks               : PropTypes.number,
 	weekOffset          : PropTypes.number,
-	monthHeader         : PropTypes.string
+	monthHeader         : PropTypes.string,
+	data                : PropTypes.array
 }
 
 Calendar.defaultProps = {

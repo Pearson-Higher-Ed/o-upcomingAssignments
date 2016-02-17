@@ -8,13 +8,14 @@ class ListItemContainer extends Component {
    let {data, index} = this.props
 console.log(data)
 
+
   let listItemTopLeft  = data.items[0].courseName
-  , listItemTopRight   = data.dueDate
+  , listItemTopRight   = data.due_date
   , listItemBottom     = data.items[0].couseSummary
 
 
     return (
-        <li key={`listItem${index}`} id={`listItemHeader${index}`} className='listItem' onClick={() => {window.location = "http://www.google.com"} }>
+        <li key={`listItem${index}`} id={`listItemHeader${index}`} className='listItem'>
           <h4 className='listItemTopLeft'>{listItemTopLeft}</h4>
           <h4 className='listItemTopRight'>{listItemTopRight}</h4>
           <h6 className='listItemBottom'>{listItemBottom}</h6>

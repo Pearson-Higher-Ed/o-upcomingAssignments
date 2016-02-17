@@ -1,6 +1,6 @@
 {
   "data": [{
-    "dueDate": "Tue Feb, 2",
+    "due_date": "Tue Feb, 2",
     "items": [{
       "courseName": "History 201",
       "dueTime": "Midnight",
@@ -11,14 +11,14 @@
       "couseSummary": "Chapter 6"
     }]
   }, {
-    "dueDate": "Tue Feb, 3",
+    "due_date": "Tue Feb, 3",
     "items": [{
       "courseName": "English 221",
       "dueTime": "Noon",
       "couseSummary": "Chapter 3"
     }]
   }, {
-    "dueDate": "Tue Feb, 4",
+    "due_date": "Tue Feb, 4",
     "items": [{
       "courseName": "Spanish 421",
       "dueTime": "Noon",

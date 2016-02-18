@@ -1,21 +1,21 @@
 import React, {Component, PropTypes} from 'react'
 
 
-class ListItemContainer extends Component {
+export default class ListItem extends Component {
+
 
   render(){
 
-   let {data, index} = this.props
-console.log(data)
+   let {d, i} = this.props
 
+    let listItemTopLeft = d.courseName
+    , listItemTopRight  = d.dueTime
+    , listItemBottom    = d.couseSummary
 
-  let listItemTopLeft  = data.items[0].courseName
-  , listItemTopRight   = data.due_date
-  , listItemBottom     = data.items[0].couseSummary
 
 
     return (
-        <li key={`listItem${index}`} id={`listItemHeader${index}`} className='listItem'>
+        <li id={`listItem${i}`} className='listItem' key={`listItem${i}`}>
           <h4 className='listItemTopLeft'>{listItemTopLeft}</h4>
           <h4 className='listItemTopRight'>{listItemTopRight}</h4>
           <h6 className='listItemBottom'>{listItemBottom}</h6>
@@ -24,9 +24,8 @@ console.log(data)
   }
 }
 
-export default ListItemContainer
 
-ListItemContainer.PropTypes = {
-  data  : PropTypes.object,
-  index : PropTypes.number
+ListItem.PropTypes = {
+  d  : PropTypes.object,
+  i  : PropTypes.number
 }

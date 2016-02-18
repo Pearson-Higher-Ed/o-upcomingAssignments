@@ -1,29 +1,19 @@
 import React, { Component, PropTypes } from 'react'
-import ListItem                        from './ListItem'
+import ListItemSection                 from './ListItemSection'
 
 
 export default class DynamicList extends Component {
 
 
-	constructor(props) {
-		super(props)
-
-		this.state = {
-			header : 'Assignments'
-		}
-
-	}
-
-
 	render(){
 
-		let { data } = this.props
-console.log(data)
+		let { data, header } = this.props
+
 		return(
 			<div id= 'mainContainer' className='mainContainer'>
-				<h3 id='header' className='header'>{this.state.header}</h3>
+				<h3 id='header' className='header'>{header}</h3>
 				<ul id='list' className='list'>
-					{data.map((d,i) => {return <ListItem data={d} key={`ListItem${i}`} index={i} />} )}
+					{data.map((d,i) => {return <ListItemSection data={d} key={`ListItemSection${i}`} index={i} />} )}
 				</ul>
 			</div>
 		)
@@ -32,5 +22,6 @@ console.log(data)
 }
 
 DynamicList.propTypes = {
-  data: PropTypes.array
+  data   : PropTypes.array,
+	header : PropTypes.string
 }

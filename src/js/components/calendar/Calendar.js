@@ -13,7 +13,7 @@ class Calendar extends Component {
 
 	render(){
 
-		let { daysOfWeek, data } = this.props
+		let { daysOfWeek, data , header } = this.props
 
 		return(
 			<div>
@@ -24,7 +24,7 @@ class Calendar extends Component {
 					</thead>
 					<TableBody {...this.props} data={data} />
 				</table>
-				<DynamicList data={data} />
+				<DynamicList data={data} header={header} />
 			</div>
 		)
 
@@ -41,7 +41,8 @@ Calendar.propTypes = {
 	weeks               : PropTypes.number,
 	weekOffset          : PropTypes.number,
 	monthHeader         : PropTypes.string,
-	data                : PropTypes.array
+	data                : PropTypes.array,
+	header              : PropTypes.string
 }
 
 Calendar.defaultProps = {
@@ -49,6 +50,7 @@ Calendar.defaultProps = {
 	daysOfWeek          : ["S", "M", "T", "W", "T", "F", "S"],
 	weeks               : 3,
 	weekOffset          : 0,
+	header              : "Assignments",
 	monthHeader         : HeaderMonth()
 }
 

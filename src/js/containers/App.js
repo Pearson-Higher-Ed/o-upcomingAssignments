@@ -12,7 +12,8 @@ function mapStateToProps(state){
 		weeks       : state.weeks,
 		weekOffset  : state.weekOffset,
 		monthHeader : state.monthHeader,
-		data        : data
+		data        : data,
+		header      : state.header
 	}
 }
 

@@ -71,13 +71,13 @@ export default class TableBody extends Component{
       staticDay      = ""
     }else if(currentMonthDayTime == rangeEndTime){
       highlightStyle = "rangeEnd"
-      staticDay      = "" 
+      staticDay      = ""
     }
 
     return (
       <span className={currentRange}>
         <div className={highlightStyle} id={`day${dayOfMonth}`}>
-          <div className={staticDay}>
+          <div id={staticDay}>
             <span className={`dayText${dayOfMonth}`}>{dayOfMonth}</span>
             <br></br>
             <span className='bullet'>&bull;</span>

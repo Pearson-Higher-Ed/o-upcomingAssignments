@@ -18,7 +18,7 @@ export default class ListItem extends Component {
 
     return (
         <li id={`listItem${i}`} className='listItem' key={`listItem${i}`}>
-          <a href={courseHref}>
+          <a href={courseHref} className='assignmentLink'>
             <h4 className='listItemTopLeft'>{listItemTopLeft}</h4>
             <h4 className='listItemTopRight'>{listItemTopRight}</h4>
             <h6 className='listItemBottom'>{listItemBottom}</h6>

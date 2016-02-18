@@ -10,7 +10,6 @@ table{
   padding: 0.3em 0.3em 0.3em 0.3em;
 }
 
-
 tbody tr{
   border-top: 1px solid darken(#ffffff, 45%);
 }
@@ -22,8 +21,8 @@ td{
 }
 
 .bullet{
-  // color: darken(#a6e2eb, 15%);
-  // font-weight: bold;
+  color: darken(#a6e2eb, 40%);
+  font-weight: bold;
 }
 
 .button{
@@ -61,7 +60,7 @@ td{
   margin-right:0.2em;
 }
 
-.staticCurrentDay{
+#staticCurrentDay{
   background-color: darken(#ffffff, 5%);
   border-radius: 0.7em 0.7em 0.7em 0.7em;
 }

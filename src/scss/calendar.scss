@@ -61,28 +61,31 @@ td{
   padding-bottom:0.25em;
 }
 
+
+// border sytles on the highlight displace calendar Row height.... beware.
+
 .rangeStart{
   background-color: darken(#d5f1f6, 10%);
   border-radius: 0.7em 0.0em 0.0em 0.7em;
   margin-left:0.2em;
-  border-top: 1px solid darken(#a6e2eb, 15%);
-  border-bottom: 1px solid darken(#a6e2eb, 15%);
-  border-left:  1px solid darken(#a6e2eb, 15%);
+  // border-top: 1px solid darken(#a6e2eb, 15%);
+  // border-bottom: 1px solid darken(#a6e2eb, 15%);
+  // border-left:  1px solid darken(#a6e2eb, 15%);
 }
 
 .rangeMiddle{
   background-color: darken(#d5f1f6, 10%);
-  border-top: 1px solid darken(#a6e2eb, 15%);
-  border-bottom: 1px solid darken(#a6e2eb, 15%);
+  // border-top: 1px solid darken(#a6e2eb, 15%);
+  // border-bottom: 1px solid darken(#a6e2eb, 15%);
 }
 
 .rangeEnd{
   background-color: darken(#d5f1f6, 10%);
   border-radius: 0em 0.7em 0.7em 0em;
   margin-right:0.2em;
-  border-top: 1px solid darken(#a6e2eb, 15%);
-  border-bottom: 1px solid darken(#a6e2eb, 15%);
-  border-right:  1px solid darken(#a6e2eb, 15%);
+  // border-top: 1px solid darken(#a6e2eb, 15%);
+  // border-bottom: 1px solid darken(#a6e2eb, 15%);
+  // border-right:  1px solid darken(#a6e2eb, 15%);
 }
 
 #leftButton{

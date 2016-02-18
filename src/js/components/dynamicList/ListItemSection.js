@@ -15,7 +15,7 @@ export default class ListItemSection extends Component{
 
     return(
       <li className='listItemSection' id={`listItemSection${index}`} key={`listItemSection${index}`} >
-        <h2 className='due_date' >{dueDateStringShort}</h2>
+        <h2 className='dueDate' >{dueDateStringShort}</h2>
         <ul>
           { items.map( (d,i) => { return <ListItem d={d} i={i} key={`ListItem${i}`} /> } ) }
         </ul>

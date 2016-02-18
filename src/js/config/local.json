@@ -1,10 +1,1 @@
-{
-  header: 'Assignments',
-  data: data,
-  assignmentUrl: 'http://las.stg-openclass.com:80/las-api/api/courses/55b7dcf1e4b04136b8d24f2a/assignments/7aa13f13-2394-484e-9798-3047bb24ce90/tree?apiKey=19d26d452432968c9b636c9daf0c6d9b',
-  assignmentHeaders: new Headers({
-    "Content-Type": "application/json",
-    "Accept": "*/*",
-    "x-authorization": "eyJhbGciOiJSUzUxMiIsImtpZCI6ImsxMDY5NDgxOTAifQ.eyJleHAiOjE0NTQ1NzU1MTYsInN1YiI6ImZmZmZmZmZmNTNhODQwYzJlNGIwN2JhM2UyYTc0NDYwIiwic2Vzc2lkIjoiMWY4YWFkMTJkNTJmNGI2NjllNGM1YzQxYzBkMjJmYTUiLCJ0eXBlIjoiYXQiLCJpYXQiOjE0NTQ1NjQ3MTZ9.dJJgaFQUzMh7cBCZXF7Xr3IwDtgaFofnWWViAv3F2gplJ5Qaiy3xF-XmWMjt41__RCV5fdDg8YuE9Kh8gLfjWR9Sp60HOlcrfa9DrJx8blNmbNIoOa8_q8OsRQhE165aqRHYOTaLDFNBftIx4EnSVxm7kXd7A2A4zgroeQKPgks"
-  })
-}
+{}

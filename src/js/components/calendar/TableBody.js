@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component , PropTypes } from 'react'
 
 
 export default class TableBody extends Component{
@@ -118,8 +118,9 @@ export default class TableBody extends Component{
 
 
 
-TableBody.PropTypes = {
-  weeks      : React.PropTypes.number
+TableBody.propTypes = {
+  weeks      : PropTypes.number,
+  data       : data
 }
 
 TableBody.defaultProps = {

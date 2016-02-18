@@ -65,13 +65,13 @@ export default class TableBody extends Component{
     if(rangeStartTimeOffset == currentMonthDayTime){
       highlightStyle = "rangeStart"
       currentRange   = "rangeCurrentDay"
-      staticDay      = ""
+      staticDay      = "notStaticCurrentDay"
     }else if((currentMonthDayTime > rangeEndTime) && (rangeStartTimeOffset >= currentMonthDayTime)){
       highlightStyle = "rangeMiddle"
-      staticDay      = ""
+      staticDay      = "notStaticCurrentDay"
     }else if(currentMonthDayTime == rangeEndTime){
       highlightStyle = "rangeEnd"
-      staticDay      = ""
+      staticDay      = "notStaticCurrentDay"
     }
 
     return (

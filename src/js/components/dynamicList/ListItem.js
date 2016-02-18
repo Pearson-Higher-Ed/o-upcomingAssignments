@@ -11,14 +11,17 @@ export default class ListItem extends Component {
     let listItemTopLeft = d.courseName
     , listItemTopRight  = d.dueTime
     , listItemBottom    = d.couseSummary
+    , courseHref        = d.courseHref
 
 
 
     return (
         <li id={`listItem${i}`} className='listItem' key={`listItem${i}`}>
-          <h4 className='listItemTopLeft'>{listItemTopLeft}</h4>
-          <h4 className='listItemTopRight'>{listItemTopRight}</h4>
-          <h6 className='listItemBottom'>{listItemBottom}</h6>
+          <a href={courseHref}>
+            <h4 className='listItemTopLeft'>{listItemTopLeft}</h4>
+            <h4 className='listItemTopRight'>{listItemTopRight}</h4>
+            <h6 className='listItemBottom'>{listItemBottom}</h6>
+          </a>
         </li>
     )
   }

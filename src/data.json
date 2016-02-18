@@ -4,29 +4,34 @@
     "items": [{
       "courseName": "History 201",
       "dueTime": "Midnight",
-      "couseSummary": "Chapter 2"
+      "couseSummary": "Chapter 2",
+      "courseHref": "http://www.google.com"
     }, {
       "courseName": "Math 301",
       "dueTime": "Noon",
-      "couseSummary": "Chapter 6"
+      "couseSummary": "Chapter 6",
+      "courseHref": "http://www.google.com"
     }]
   }, {
     "due_date": "Tue Feb, 3",
     "items": [{
       "courseName": "English 221",
       "dueTime": "Noon",
-      "couseSummary": "Chapter 3"
+      "couseSummary": "Chapter 3",
+      "courseHref": "http://www.google.com"
     }]
   }, {
     "due_date": "Tue Feb, 4",
     "items": [{
       "courseName": "Spanish 421",
       "dueTime": "Noon",
-      "couseSummary": "Chapter 3: the Spanish something..."
+      "couseSummary": "Chapter 3: the Spanish something...",
+      "courseHref": "http://www.google.com"
     }, {
       "courseName": "Physics 541",
       "dueTime": "Midnight",
-      "couseSummary": "Chapter 3: the Physics something..."
+      "couseSummary": "Chapter 3: the Physics something...",
+      "courseHref": "http://www.google.com"
     }]
   }]
 }

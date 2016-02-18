@@ -8,8 +8,9 @@ export default class ListItem extends Component {
 
    let {d, i} = this.props
 
-    let listItemTopLeft = d.courseName
-    , listItemTopRight  = d.dueTime
+    let dueTimeObject   = new Date(d.dueTime)
+    , listItemTopLeft   = d.courseName
+    , listItemTopRight  = dueTimeObject.toLocaleTimeString()
     , listItemBottom    = d.couseSummary
     , courseHref        = d.courseHref
 

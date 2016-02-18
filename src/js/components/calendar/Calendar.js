@@ -8,7 +8,7 @@ import DynamicList                     from './../dynamicList/DynamicList'
 
 
 
-class Calendar extends Component {
+export default class Calendar extends Component {
 
 
 	render(){
@@ -53,7 +53,3 @@ Calendar.defaultProps = {
 	header              : "Assignments",
 	monthHeader         : HeaderMonth()
 }
-
-
-
-export default Calendar

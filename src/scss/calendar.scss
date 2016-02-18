@@ -34,6 +34,11 @@ td{
   padding: 0.25em;
 }
 
+.dayCell{
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+}
+
 .headerTitle{
   font-weight: bolder;
   text-align: left;
@@ -56,9 +61,21 @@ td{
   margin-right:0.2em;
 }
 
+.staticCurrentDay{
+  background-color: darken(#ffffff, 5%);
+  border-radius: 0.7em 0.7em 0.7em 0.7em;
+}
+
 .rangeCurrentDay{
   background-color: darken(#a6e2eb, 15%);
   border-radius: 0.7em 0.7em 0.7em 0.7em;
+  padding-top: 0.25em;
+  padding-bottom:0.25em;
+}
+
+.rangeNotCurrentDay{
+  padding-top: 0.25em;
+  padding-bottom:0.25em;
 }
 
 #leftButton{

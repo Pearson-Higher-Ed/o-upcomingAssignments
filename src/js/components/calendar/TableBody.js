@@ -34,7 +34,7 @@ export default class TableBody extends Component{
        dayCell = day + ((week) * 7)
 
        dayList.push(
-         <td key={`dayCell${dayCell}`} id={`dayCell${dayCell}`}>{this.generateWeekRowDayCellText(dayCell)}</td>
+         <td key={`dayCell${dayCell}`} id={`dayCell${dayCell}`} className='dayCell'>{this.generateWeekRowDayCellText(dayCell)}</td>
        )
      }
 
@@ -54,22 +54,30 @@ export default class TableBody extends Component{
     , rangeStartTimeOffset = weekOffsetTime + dayTextTime
     , rangeEndTime         = weekOffsetTime + dayTextTime + (highlightDays * -86400000)
     , highlightStyle       = ""
+    , staticDay            = ""
     , currentDay           = "currentDay"
     , currentRange         = "rangeNotCurrentDay"
+
+    if (dayTextTime == currentMonthDayTime){
+       staticDay = "staticCurrentDay"
+    }
 
     if(rangeStartTimeOffset == currentMonthDayTime){
       highlightStyle = "rangeStart"
       currentRange   = "rangeCurrentDay"
+      staticDay      = ""
     }else if((currentMonthDayTime > rangeEndTime) && (rangeStartTimeOffset >= currentMonthDayTime)){
       highlightStyle = "rangeMiddle"
+      staticDay      = ""
     }else if(currentMonthDayTime == rangeEndTime){
       highlightStyle = "rangeEnd"
+      staticDay      = "" 
     }
 
     return (
       <span className={currentRange}>
         <div className={highlightStyle} id={`day${dayOfMonth}`}>
-          <div className={currentRange}>
+          <div className={staticDay}>
             <span className={`dayText${dayOfMonth}`}>{dayOfMonth}</span>
             <br></br>
             <span className='bullet'>&bull;</span>

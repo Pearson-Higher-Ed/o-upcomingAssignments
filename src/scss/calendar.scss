@@ -21,6 +21,10 @@ td{
   padding-bottom: 0.75em;
 }
 
+.bullet{
+  // color: darken(#a6e2eb, 15%);
+  // font-weight: bold;
+}
 
 .button{
   margin-top:0.75em;
@@ -63,8 +67,6 @@ td{
 .rangeCurrentDay{
   background-color: darken(#a6e2eb, 15%);
   border-radius: 0.7em 0.7em 0.7em 0.7em;
-  margin-top:5px;
-  margin-bottom:5px;
 }
 
 #leftButton{

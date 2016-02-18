@@ -69,9 +69,11 @@ export default class TableBody extends Component{
     return (
       <span className={currentRange}>
         <div className={highlightStyle} id={`day${dayOfMonth}`}>
-          <span className={`dayText${dayOfMonth}`}>{dayOfMonth}</span>
-          <br></br>
-          <span className='bullet'>&bull;</span>
+          <div className={currentRange}>
+            <span className={`dayText${dayOfMonth}`}>{dayOfMonth}</span>
+            <br></br>
+            <span className='bullet'>&bull;</span>
+          </div>
         </div>
       </span>
     )
@@ -116,7 +118,7 @@ export default class TableBody extends Component{
 
 TableBody.propTypes = {
   weeks      : PropTypes.number,
-  data       : data
+  data       : PropTypes.array
 }
 
 TableBody.defaultProps = {

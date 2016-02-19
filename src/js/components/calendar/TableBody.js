@@ -57,11 +57,19 @@ export default class TableBody extends Component{
     , staticDay              = ""
     , currentDay             = "currentDay"
     , currentRange           = "rangeNotCurrentDay"
+    , bullet                 = ""
 
+    if(data[0].due_date == currentMonthDayTime){
+      console.log('hit '+ data[0].due_date + ' '+ dayTextTime)
+      bullet = 'showBullet'
+    }
+
+    // show today as higlighted...
     if (dayTextTime == currentMonthDayTime){
        staticDay = "staticCurrentDay"
     }
 
+    // apply highlight....
     if(rangeStartTimeOffset == currentMonthDayTime){
       highlightStyle = "rangeStart"
       currentRange   = "rangeCurrentDay"
@@ -80,7 +88,7 @@ export default class TableBody extends Component{
           <div className={currentRange}>
             <span className={`dayText${dayOfMonth}`}>{dayOfMonth}</span>
             <br></br>
-            <span className='bullet'>&bull;</span>
+            <span className={`bullet ${bullet}`}>&bull;</span>
           </div>
         </div>
       </div>
